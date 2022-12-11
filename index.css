@@ -1,0 +1,267 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1.5px solid rgba(0, 0, 0, .2);
+    animation: fadeIn .5s;
+}
+
+
+.movie-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: #111827
+    ;
+}
+.movie-detail > p {
+    margin: 0;
+
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem ;
+    
+}
+
+h3{
+    margin: 0;
+    padding-right: .6em;
+    
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.plot {
+    opacity: 0.7;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+header {
+    padding: 42px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), 
+                rgba(0, 0, 0, 0.7)),
+                url(images/movies.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 208px;
+    background-size: cover;
+    color: white;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 269px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+
+form > input {
+    width: 40%;
+    padding: 1em 3em;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-color: rgba(0, 0, 0, .2);
+    border-right: 0;
+    margin-right: 0;
+    background: white url('./images/Icon.svg') no-repeat 15px center;
+    background-size: 16px;
+    
+}
+
+ form > button {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: rgba(0, 0, 0, .2);
+    padding: .5em 2em;
+    color: rgba(0, 0, 0, .7);
+    border-left: 0;
+    margin-left: 0;
+ }
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 500ms;
+    padding-bottom: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 3em auto;
+    /* border: 1px solid red; */
+    
+}
+
+.movie-poster {
+    width: 170px;
+    max-height: 250px;
+    margin-right: 1.5em;
+    border-radius: 3px;
+}
+
+#movies {
+    position: relative;
+
+}
+
+.home-page-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    
+    transform: translateY(100%);
+
+    
+
+}
+
+
+.h2 {
+    color: #aaa8a8;
+    max-width: 400px;
+}
+
+.star-icon {
+    width: 17px;
+    padding-right: 5px;
+}
+
+
+.div-btn-watchList, .remove-all {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 500ms;
+    gap: 8px;
+    
+}
+.div-btn-watchList:hover , .remove-all:hover, .div-btn-watchList-1:hover {
+    background-color: lightsalmon;
+    border-radius: 10px;
+    padding: .5em 1em;
+    
+}
+
+.div-btn-watchList > p , .remove-all >p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.div-btn-watchList > img , .remove-all >img{
+    width: 24px;
+    margin: 0;
+}
+
+.div-btn-watchList a {
+    color: #111827;
+    display: flex;
+    gap: 5px;
+
+}
+
+.div-btn-watchList-1 {
+    transition: 500ms;
+}
+
+.div-btn-watchList-1 a {
+    color: black;
+    display: flex;
+    gap: 5px;
+
+}
+
+
+.suggested-movies {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.remove-all {
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgb(230, 83, 83);
+    padding: .5em .5em;
+    border-radius: 10px;
+    color: white;
+}
+
+header a:hover {
+    border-bottom: 1px solid lightsalmon;
+    color: lightsalmon;
+}
+
+@media (max-width: 1020px) {
+    main {
+        width: 100%;
+    }
+    .plot {
+        max-width: 100%;
+        margin: .4em;
+    }
+    .container {
+        margin: 1em;
+    }
+    .flex {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 7px;
+    }
+
+    form > input {
+        width: 65%;
+    }
+    header {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    /* .runtime {
+        display: none;
+    } */
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
